@@ -16,12 +16,14 @@ export class TextboxButtonComponent implements AfterViewInit {
   @ViewChild('messageElement') messageElementRef!: ElementRef;
 
   ngAfterViewInit() {
+    // Remove the element if not needed based on showMessage
     if (!this.showMessage && this.messageElementRef) {
       this.messageElementRef.nativeElement.remove();
     }
   }
 
   verifyText() {
+    // Set the showMessage value based on user input
     this.showMessage = this.textValue === 'hello world';
   }
 }
