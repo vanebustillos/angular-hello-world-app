@@ -1,0 +1,7 @@
+<div>
+  <input type="text" [(ngModel)]="textValue"> &nbsp; &nbsp;
+</div>
+<div class="div">
+  <button class="button-pill" (click)="verifyText()">Verify Text</button>
+</div>
+<div #messageElement *ngIf="showMessage">You typed hello world! 🎉</div>
